@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// 
+/// classe boite herite de mono
 /// </summary>
 public class Boite : MonoBehaviour
 {
