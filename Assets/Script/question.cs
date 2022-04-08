@@ -13,12 +13,13 @@ public class question : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 canvas.SetActive(false);
+                GameManager.instance.changeUsing();
             }
         }
     }
     public void activate()
     {
-        print("yep");
+        GameManager.instance.changeUsing();
         canvas.SetActive(true);
         ouvert = true;
     }

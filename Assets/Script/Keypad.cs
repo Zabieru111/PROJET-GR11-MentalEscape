@@ -13,11 +13,15 @@ public class Keypad : MonoBehaviour
     public Text text;
     private bool answered = false;
     public int type;
+    public float cordx;
+    public float cordy;
+    public float cordz;
+    private bool state = false;
 
     public void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&&state==true)
         {
             fermerCanvas();
         }
@@ -29,12 +33,14 @@ public class Keypad : MonoBehaviour
             canvas.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
+            GameManager.instance.changeUsing();
+            state = true;
         }
 
     }
     public void clickButton(GameObject button)
     {
-        if (nombreClick < answer.Length)
+        if (nombreClick < 8)
         {
             
             nombreClick++;
@@ -79,7 +85,7 @@ public class Keypad : MonoBehaviour
             }
             else if (type == 11)
             {
-                Instantiate(GameObject, new Vector3(-19, 5, 5), Quaternion.identity);
+                Instantiate(GameObject, new Vector3(cordx, cordy, cordz), Quaternion.identity);
             }
             
         }
@@ -93,5 +99,7 @@ public class Keypad : MonoBehaviour
         canvas.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GameManager.instance.changeUsing();
+        state = false;
     }
 }

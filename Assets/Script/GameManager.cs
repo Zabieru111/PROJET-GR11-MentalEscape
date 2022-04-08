@@ -9,6 +9,13 @@ public class GameManager : MonoBehaviour
     public int minutes = 10;
     public float secondes = 0f;
     public string tempRestant;
+    public float mouseSensitivity = 100f;
+    public enum state { defeat, inGame, paused, victory };
+    public state gameState;
+    private bool GameMenuState = false;
+    [SerializeField] GameObject menu;
+    public bool usingSomething = false;
+    public float afterUse;
 
 
 
@@ -19,7 +26,7 @@ public class GameManager : MonoBehaviour
     public void Awake()
     {
         tempRestant = " ";
-        if (instance !=null)
+        if (instance != null)
         {
             Destroy(instance);
 
@@ -34,50 +41,67 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameState = state.inGame;
+        afterUse = 0f;
     }
 
     // Pour update le text du timer
     void Update()
     {
-        if (minutes >= 0)
+        if (afterUse < 2)
         {
-            if (secondes > 0f)
+            afterUse += Time.deltaTime;
+        }
+        if (usingSomething == false&&afterUse>1f)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                secondes -= Time.deltaTime;
+
+                gameState = state.paused;
+                OpenMenu();
             }
-            if (secondes <= 0f && minutes > 0)
+        }
+        if (gameState == state.inGame)
+        {
+            if (minutes >= 0)
             {
-                minutes--;
-                secondes = 60f;
+                if (secondes > 0f)
+                {
+                    secondes -= Time.deltaTime;
+                }
+                if (secondes <= 0f && minutes > 0)
+                {
+                    minutes--;
+                    secondes = 60f;
+                }
+
             }
-
+            if (secondes > 10f)
+            {
+                tempRestant = minutes + ":" + (int)secondes;
+            }
+            else
+            {
+                tempRestant = minutes + ":0" + (int)secondes;
+            }
+            if (minutes == 0 && secondes == 0f)
+            {
+            }
         }
-        if (secondes > 10f)
-        {
-            tempRestant = minutes + ":" + (int)secondes;
-        }
-        else
-        {
-            tempRestant = minutes + ":0" + (int)secondes;
-        }
-        if (minutes == 0 && secondes == 0f)
-        {
-        }
-    
 
 
 
-}
+
+    }
 
 
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
-    public void LoadSceneMainMenu() 
+    public void LoadSceneMainMenu()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Main_Menu");
     }
     public void LoadSceneChimie()
     {
@@ -91,6 +115,52 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("");
     }
+    public void Defeat()
+    {
+        gameState = state.defeat;
+    }
+    public void Victory()
+    {
+        gameState = state.victory;
+    }
+    public void OpenMenu()
+    {
+        if (GameMenuState == false)
+        {
+            GameMenuState = true;
+            menu.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+    }
+    public void Resume()
+    {
+        gameState = state.inGame;
+        GameMenuState = false;
+        menu.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    public void LeaveGame()
+    {
+#if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit(0);
+#endif
+    }
+    public void changeSensitivity(float value)
+    {
+        mouseSensitivity = value;
+    }
+    public void changeUsing()
+    {
+        usingSomething = !usingSomething;
+        afterUse = 0f;
+    }
+
 
 
 

@@ -6,7 +6,7 @@ public class Player_Rotation : MonoBehaviour
 {
     
     
-    public float sensitivity = 100f;
+    
     public Transform player;
     float xRotation = 0f;
     public 
@@ -19,15 +19,17 @@ public class Player_Rotation : MonoBehaviour
     
     void Update()
     {
-        float x = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        float y = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        if (GameManager.instance.gameState==GameManager.state.inGame&&GameManager.instance.usingSomething==false)
+        {
+            float x = Input.GetAxis("Mouse X") * GameManager.instance.mouseSensitivity * Time.deltaTime;
+            float y = Input.GetAxis("Mouse Y") * GameManager.instance.mouseSensitivity * Time.deltaTime;
 
-        xRotation -= y;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            xRotation -= y;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        player.Rotate(Vector3.up * x);
-
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            player.Rotate(Vector3.up * x);
+        }
         
 
     }

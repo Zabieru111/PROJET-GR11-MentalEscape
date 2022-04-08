@@ -39,7 +39,7 @@ public class RayCast : MonoBehaviour
                     <= distance * distance
                     && Input.GetKeyDown(KeyCode.E))
                 {
-                    print("yues");
+            
                    focus.gameObject.GetComponent<Selectable>().Interagir();
                 }
             }

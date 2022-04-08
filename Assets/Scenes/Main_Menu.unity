@@ -492,7 +492,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4278233343
   m_fontColor: {r: 1, g: 0.65882355, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
@@ -1238,6 +1238,9 @@ MonoBehaviour:
   GameObject: {fileID: 282868865}
   text: {fileID: 1430698233}
   type: 1
+  cordx: 0
+  cordy: 0
+  cordz: 0
 --- !u!114 &107942728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6383,7 +6386,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4278190335
   m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3

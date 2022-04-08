@@ -30,5 +30,11 @@ public class Selectable : MonoBehaviour
             
             Object.GetComponent<question>().activate();
         }
+        //type pour levier
+        if (type == 5)
+        {
+
+            Object.GetComponent<Levier>().activate();
+        }
     }
 }

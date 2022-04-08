@@ -59,12 +59,12 @@ public class Cadenas : MonoBehaviour
 
         if (type == 11)
         {
-            Instantiate(GameObject, new Vector3(cordx,cordy,cordz), Quaternion.identity);
+            Instantiate(cle, new Vector3(cordx,cordy,cordz), Quaternion.identity);
             test=true;
             Cadenas cad = new Cadenas();
-            cad = effet.GetComponent<Cadenas>();
+            cad = otherShelf.GetComponent<Cadenas>();
             if(cad.verif()==true){
-                Instantiate(GameObject, new Vector3(-11, 1, -18), Quaternion.identity);
+                Instantiate(GameObject, new Vector3((float)-12.2, (float)3.934197, (float)-20.3), Quaternion.identity);
             }
 
         }else{

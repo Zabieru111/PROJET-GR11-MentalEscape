@@ -28,14 +28,12 @@ public class Boite : MonoBehaviour
 }
     void Ouvrir()
     {
-        if (transform.localRotation.z < 0.5)
-        {
+        
             Destroy(this.gameObject);
-        }
-        else
-        {
+        
+        
             ouvert = true;
-        }
+        
     }
     public void Code()
     {

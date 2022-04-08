@@ -52,13 +52,17 @@ if (this.transform.position.y <= plancher.transform.position.y+0.27f)
     }
     public void prendre()
     {
-        calculerDistance();
-        picked = true;
-        if (this.name.Contains("key") && taken == false)
+        if (clear)
         {
-            GameManager.instance.addKey();
-            taken = true;
+            calculerDistance();
+            picked = true;
+            if (this.name.Contains("key") && taken == false)
+            {
+                GameManager.instance.addKey();
+                taken = true;
+            }
         }
+        
         
     }
     public void accessible()
