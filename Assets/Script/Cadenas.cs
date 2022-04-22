@@ -10,7 +10,6 @@ public class Cadenas : MonoBehaviour
     public GameObject effet;
     public GameObject GameObject;
     public GameObject otherShelf;
-    public GameObject question;
     public int type;
     private bool test=false;
     public float cordx;
@@ -25,7 +24,6 @@ public class Cadenas : MonoBehaviour
             (this.transform.position.z - cle.transform.position.z) * (this.transform.position.z - cle.transform.position.z) +
             (this.transform.position.y - cle.transform.position.y) * (this.transform.position.y - cle.transform.position.y)) < 1f)
             {
-                print("AAAA");
                 Destroy(cle);
                 deverouiller();
 

@@ -9,7 +9,6 @@ using UnityEngine;
 /// </summary>
 public class Boite : MonoBehaviour
 {
-    public GameObject gameObject;
     float speed = 1f;
     float zRotation = 0f;
     bool ouvert = false;
