@@ -8,7 +8,7 @@ public class Main_menu : MonoBehaviour
 
   public  void clickPlayChimie()
     {
-        SceneManager.LoadScene("Chimie");
+        SceneManager.LoadScene("Science");
     }
     public void clickPlayMath()
     {
