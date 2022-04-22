@@ -12,6 +12,7 @@ public class question : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                ouvert = false;
                 canvas.SetActive(false);
                 GameManager.instance.changeUsing();
             }

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public float secondes = 0f;
     public string tempRestant;
     public float mouseSensitivity = 100f;
-    public enum state { defeat, inGame, paused, victory };
+    public enum state { defeat, inGame, paused, victory,none };
     public state gameState;
     private bool GameMenuState = false;
     [SerializeField] GameObject menu;
@@ -160,6 +160,11 @@ public class GameManager : MonoBehaviour
         usingSomething = !usingSomething;
         afterUse = 0f;
     }
+    public void none()
+    {
+        gameState = state.none;
+    }
+
 
 
 

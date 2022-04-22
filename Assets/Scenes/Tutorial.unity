@@ -6631,7 +6631,7 @@ MonoBehaviour:
   secondes: 0
   tempRestant: 
   mouseSensitivity: 1000
-  gameState: 0
+  gameState: 4
   menu: {fileID: 1577384066}
   usingSomething: 0
   afterUse: 0
@@ -11061,7 +11061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2122169736
 MonoBehaviour:
   m_ObjectHideFlags: 0
