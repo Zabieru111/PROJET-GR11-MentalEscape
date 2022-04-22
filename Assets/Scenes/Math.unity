@@ -274,7 +274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd31304b251d8468dd8404b1707558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 20890902}
 --- !u!65 &20890904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4063,7 +4062,6 @@ MonoBehaviour:
   effet: {fileID: 1689995287}
   GameObject: {fileID: 2308078651208657546, guid: b826c3ca05d477c4499dce3b9bebb79a, type: 3}
   otherShelf: {fileID: 767439192}
-  question: {fileID: 0}
   type: 11
   cordx: -9.727
   cordy: 4.739
@@ -6889,7 +6887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd31304b251d8468dd8404b1707558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 365248687}
 --- !u!1 &373621899
 GameObject:
   m_ObjectHideFlags: 0
@@ -13302,7 +13299,7 @@ GameObject:
   - component: {fileID: 669345544}
   m_Layer: 0
   m_Name: question1
-  m_TagString: selectible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14965,7 +14962,6 @@ MonoBehaviour:
   effet: {fileID: 767439192}
   GameObject: {fileID: 2308078651208657546, guid: b826c3ca05d477c4499dce3b9bebb79a, type: 3}
   otherShelf: {fileID: 220533351}
-  question: {fileID: 0}
   type: 11
   cordx: -4.795
   cordy: 4.7
@@ -15531,7 +15527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd31304b251d8468dd8404b1707558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 800090530}
 --- !u!1 &802419845
 GameObject:
   m_ObjectHideFlags: 0
@@ -21994,7 +21989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1074549027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25180,7 +25175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd31304b251d8468dd8404b1707558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 1195557708}
 --- !u!1 &1204478055
 GameObject:
   m_ObjectHideFlags: 0
@@ -27753,7 +27747,6 @@ MonoBehaviour:
   effet: {fileID: 0}
   GameObject: {fileID: 1608028430}
   otherShelf: {fileID: 0}
-  question: {fileID: 0}
   type: 4
   cordx: 0
   cordy: 0
@@ -31603,7 +31596,6 @@ MonoBehaviour:
   effet: {fileID: 0}
   GameObject: {fileID: 1612514398}
   otherShelf: {fileID: 0}
-  question: {fileID: 0}
   type: 4
   cordx: 0
   cordy: 0
@@ -32392,7 +32384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd31304b251d8468dd8404b1707558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 1608028430}
 --- !u!1 &1612514398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6328571628132586397, guid: 6efa0528f5387d648a5ee8166701a903, type: 3}
@@ -34157,7 +34148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1689366113
 Transform:
   m_ObjectHideFlags: 0
@@ -38381,7 +38372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd31304b251d8468dd8404b1707558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 1918834561}
 --- !u!1001 &1921598257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39167,7 +39157,6 @@ MonoBehaviour:
   effet: {fileID: 0}
   GameObject: {fileID: 1195557708}
   otherShelf: {fileID: 0}
-  question: {fileID: 0}
   type: 4
   cordx: 0
   cordy: 0
