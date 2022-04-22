@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Test.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Chimie.unity
+    path: Assets/Scenes/Science.unity
     guid: 4254459bc2392394e9e89437e0c75279
   - enabled: 1
     path: Assets/Scenes/Histoire.unity

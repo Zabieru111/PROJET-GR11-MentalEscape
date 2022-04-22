@@ -105,15 +105,19 @@ public class GameManager : MonoBehaviour
     }
     public void LoadSceneChimie()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Science");
     }
     public void LoadSceneHistoire()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Histoire");
     }
     public void LoadSceneMath()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Math");
+    }
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
     public void Defeat()
     {
