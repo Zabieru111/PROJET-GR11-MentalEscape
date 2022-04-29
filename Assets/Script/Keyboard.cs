@@ -9,11 +9,12 @@ public class Keyboard : MonoBehaviour
     public GameObject canvas;
     public GameObject GameObject;
     private bool answered = false;
+    private bool state = false;
 
     public void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && state == true)
         {
             fermerCanvas();
         }
@@ -29,6 +30,7 @@ public class Keyboard : MonoBehaviour
             canvas.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
+            state = true;
         }
 
     }
@@ -42,9 +44,11 @@ public class Keyboard : MonoBehaviour
         {
             answered = true;
             fermerCanvas();
+            int i = 9;
+            Debug.Log(i);
             Boite boite = new Boite();
-                boite = GameObject.GetComponent<Boite>();
-                boite.Code();
+            boite = GameObject.GetComponent<Boite>();
+            boite.Code();
             Destroy(this.gameObject);
         }
     }
@@ -53,6 +57,8 @@ public class Keyboard : MonoBehaviour
         canvas.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GameManager.instance.changeUsing();
+        state = false;
     }
 }
 
