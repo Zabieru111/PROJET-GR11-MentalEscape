@@ -30,6 +30,7 @@ public class Keyboard : MonoBehaviour
             canvas.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
+            GameManager.instance.changeUsing();
             state = true;
         }
 

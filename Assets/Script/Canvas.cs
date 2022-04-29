@@ -20,9 +20,10 @@ public class Canvas : MonoBehaviour
 
     public void activate()
     {
-            canvas.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
+        canvas.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        GameManager.instance.changeUsing();
         state = true;
     }
     public void fermerCanvas()

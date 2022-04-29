@@ -36,7 +36,7 @@ public class Selectable : MonoBehaviour
 
             Object.GetComponent<Levier>().activate();
         }
-        //type pour question
+        //type pour question2
         if (type == 6)
         {
 
@@ -44,8 +44,13 @@ public class Selectable : MonoBehaviour
         }
         if (type == 7)
         {
-
+            //type pour keyboard
             Object.GetComponent<Keyboard>().utiliser();
+        }
+        if (type == 8)
+        {
+            //type pour retourner au main
+            Object.GetComponent<BackToMenu>().clickBackMenu();
         }
     }
 }
