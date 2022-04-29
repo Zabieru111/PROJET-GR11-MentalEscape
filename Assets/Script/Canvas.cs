@@ -5,14 +5,16 @@ using UnityEngine;
 public class Canvas : MonoBehaviour
 {
     public GameObject canvas;
+    private bool state = false;
     // Start is called before the first frame update
 
     public void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && state == true)
         {
             fermerCanvas();
+            state = false;
         }
        
     }
@@ -22,6 +24,7 @@ public class Canvas : MonoBehaviour
             canvas.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
+        state = true;
     }
     public void fermerCanvas()
     {

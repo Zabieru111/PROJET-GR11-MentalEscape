@@ -9,13 +9,15 @@ public class Keyboard : MonoBehaviour
     public GameObject canvas;
     public GameObject GameObject;
     private bool answered = false;
+    private bool state = false;
 
     public void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && state == true)
         {
             fermerCanvas();
+            state = false;
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -29,6 +31,7 @@ public class Keyboard : MonoBehaviour
             canvas.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
+            state = true;
         }
 
     }
