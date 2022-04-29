@@ -42,5 +42,10 @@ public class Selectable : MonoBehaviour
 
             Object.GetComponent<Canvas>().activate();
         }
+        if (type == 7)
+        {
+
+            Object.GetComponent<Keyboard>().utiliser();
+        }
     }
 }
