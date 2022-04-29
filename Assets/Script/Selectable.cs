@@ -36,7 +36,7 @@ public class Selectable : MonoBehaviour
 
             Object.GetComponent<Levier>().activate();
         }
-        //type pour question
+        //type pour question2
         if (type == 6)
         {
 
