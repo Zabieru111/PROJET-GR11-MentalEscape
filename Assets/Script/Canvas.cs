@@ -14,7 +14,6 @@ public class Canvas : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && state == true)
         {
             fermerCanvas();
-            state = false;
         }
        
     }
@@ -31,5 +30,7 @@ public class Canvas : MonoBehaviour
         canvas.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GameManager.instance.changeUsing();
+        state = false;
     }
 }
