@@ -11,9 +11,6 @@ public class RayCast : MonoBehaviour
     private float distance = 4f;
     // Update is called once per frame
 
-    private void Start()
-    {
-    }
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

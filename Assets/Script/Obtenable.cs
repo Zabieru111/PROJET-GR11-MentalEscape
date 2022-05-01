@@ -7,7 +7,6 @@ public class Obtenable : MonoBehaviour
     public GameObject plancher; 
     private float radius;
     private bool picked = false;
-    public GameObject player;
     private bool taken = false;
     private bool clear;
     public int type;

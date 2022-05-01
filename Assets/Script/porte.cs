@@ -5,8 +5,7 @@ using UnityEngine;
 public class porte : MonoBehaviour
 {
     public GameObject gameObject;
-    float speed = 0.1f;
-    float zRotation = 0f;
+    float speed = 0.5f;
     public bool ouvert = false;
     private bool goodCode = false;
     // Update is called once per frame

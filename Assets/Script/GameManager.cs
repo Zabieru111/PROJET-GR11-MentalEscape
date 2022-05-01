@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Main_Menu");
     }
-    public void LoadSceneChimie()
+    public void LoadSceneScience()
     {
         SceneManager.LoadScene("Science");
     }
