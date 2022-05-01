@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public float secondes = 0f;
     public string tempRestant;
     public float mouseSensitivity = 100f;
+    public porte conditionVictoire;
     public enum state { defeat, inGame, paused, victory,none };
     public state gameState;
     private bool GameMenuState = false;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     // Pour update le text du timer
     void Update()
     {
+        checkVictoire();
         if (afterUse < 2)
         {
             afterUse += Time.deltaTime;
@@ -167,6 +169,13 @@ public class GameManager : MonoBehaviour
     public void none()
     {
         gameState = state.none;
+    }
+    public void checkVictoire()
+    {
+        if (conditionVictoire.ouvert == true)
+        {
+            Victory();
+        }
     }
 
 

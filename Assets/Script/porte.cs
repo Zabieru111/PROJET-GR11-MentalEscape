@@ -7,10 +7,10 @@ public class porte : MonoBehaviour
     public GameObject gameObject;
     float speed = 0.1f;
     float zRotation = 0f;
-    bool ouvert = false;
+    public bool ouvert = false;
     private bool goodCode = false;
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (ouvert == false&& goodCode==true)
         {
@@ -18,7 +18,7 @@ public class porte : MonoBehaviour
         }
      
     }
-    void Ouvrir()
+    public void Ouvrir()
     {
         if (transform.localRotation.z < 0.5)
         {
