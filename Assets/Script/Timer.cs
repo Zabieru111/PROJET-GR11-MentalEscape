@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int minutes = 10;
-    public float secondes = 0f;
     public Text temps;
     public Text TXTkeyNumber;
     // Update is called once per frame
