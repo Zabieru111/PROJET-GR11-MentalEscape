@@ -4575,7 +4575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plancher: {fileID: 470210547}
-  player: {fileID: 228098471}
   type: 0
 --- !u!65 &225821251
 BoxCollider:
@@ -9660,7 +9659,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plancher: {fileID: 470210547}
-  player: {fileID: 228098471}
   type: 0
 --- !u!114 &431351285
 MonoBehaviour:
@@ -20302,7 +20300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyTakenNumber: 0
-  minutes: 10
+  minutes: 60
   secondes: 0
   tempRestant: 
   mouseSensitivity: 1000
@@ -21586,7 +21584,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plancher: {fileID: 470210547}
-  player: {fileID: 228098471}
   type: 0
 --- !u!114 &971850085
 MonoBehaviour:
@@ -42673,7 +42670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cle: {fileID: 971850083}
   effet: {fileID: 0}
-  GameObject: {fileID: 1195557708}
+  GameObject: {fileID: 20890902}
   otherShelf: {fileID: 0}
   type: 4
   cordx: 0
@@ -44405,7 +44402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plancher: {fileID: 0}
-  player: {fileID: 0}
   type: 0
 --- !u!65 &2034333922
 BoxCollider:
