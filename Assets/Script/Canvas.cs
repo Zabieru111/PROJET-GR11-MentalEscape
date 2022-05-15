@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Canvas : MonoBehaviour
 {
-    public GameObject canvas;
-    private bool state = false;
-    // Start is called before the first frame update
+    public GameObject canvas; //le canvas à afficher
+    private bool state = false;//si le canvas est activé
 
     public void Update()
     {
-
+        //si le canvas est ouvert et escape est pressé
         if (Input.GetKeyDown(KeyCode.Escape) && state == true)
         {
-            fermerCanvas();
+            fermerCanvas();//il sort du canvas
         }
        
     }

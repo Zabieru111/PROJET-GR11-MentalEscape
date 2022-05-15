@@ -73,7 +73,7 @@ public class Keypad : MonoBehaviour
                 boite = GameObject.GetComponent<Boite>();
                 boite.Code();
             }else if(type == 3){
-                //détruire l'objet
+                //détruire l'objet et ouvre la boite
                 Boite boite = new Boite();
                 boite = GameObject.GetComponent<Boite>();
                 boite.Code();
@@ -85,6 +85,7 @@ public class Keypad : MonoBehaviour
             }
             else if (type == 11)
             {
+                //fait apparaitre un objet dans les coordonnées décidés
                 Instantiate(GameObject, new Vector3(cordx, cordy, cordz), Quaternion.identity);
             }
             

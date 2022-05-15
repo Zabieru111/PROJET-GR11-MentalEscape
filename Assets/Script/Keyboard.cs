@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Keyboard : MonoBehaviour
 {
-    public string answer;
-    private string myAnswer;
-    public GameObject canvas;
-    public GameObject GameObject;
-    private bool answered = false;
+    public string answer; //la réponse (mot de passe)
+    private string myAnswer; //ce que le joueur a écrit
+    public GameObject canvas; //le canvas pour écrire le mot de passe
+    public GameObject GameObject; //l'objet à débloquer
+    private bool answered = false; 
     private bool state = false;
 
     public void Update()
@@ -35,14 +35,14 @@ public class Keyboard : MonoBehaviour
         }
 
     }
-    public void ReadStringInput(string texte){
+    public void ReadStringInput(string texte){ //lit ce qui est inscrit par le joueur
         myAnswer = texte;
     }
     public void checkAndswer()
     {
         
         if (answer == myAnswer)
-        {
+        {//si la réponse est bonne, la boite s'ouvre.
             answered = true;
             fermerCanvas();
             int i = 9;
