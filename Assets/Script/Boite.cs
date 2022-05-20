@@ -25,6 +25,7 @@ public class Boite : MonoBehaviour
             Ouvrir();
         }
 }
+    //detruit l'objet après que la boite soit ouverte
     void Ouvrir()
     {
         

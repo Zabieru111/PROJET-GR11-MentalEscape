@@ -13,6 +13,7 @@ public class Victoire : MonoBehaviour
     {
         if (GameManager.instance.gameState == GameManager.state.victory)
         {
+            //active le canvas de la victoire
             GameManager.instance.usingSomething = true;
             canvas.SetActive(true);
             Cursor.visible = true;

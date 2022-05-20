@@ -19,6 +19,7 @@ public class Player_Rotation : MonoBehaviour
     
     void Update()
     {
+        //tourne la caméra du joueur en fonction des mouvements de la souris
         if (GameManager.instance.gameState==GameManager.state.inGame&&GameManager.instance.usingSomething==false)
         {
             float x = Input.GetAxis("Mouse X") * GameManager.instance.mouseSensitivity * Time.deltaTime;

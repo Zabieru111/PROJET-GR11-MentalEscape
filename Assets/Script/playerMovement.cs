@@ -18,6 +18,9 @@ public class playerMovement : MonoBehaviour
     bool isGrounded;
 
     // Update is called once per frame
+    //déplace le joueur en fonction de la touche peser
+    //si le joueur tombe d'une surface augmente la vélocité
+    //met la vélocité a 0 dès que le joueur touceh le sol
     void Update()
     {
         if (GameManager.instance.gameState == GameManager.state.inGame&&GameManager.instance.usingSomething==false)

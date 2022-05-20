@@ -11,7 +11,7 @@ public class Tiroir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //ouvre le tiroir dans la direction que le meuble pointe
         if (ouvert == true&&(Mathf.Sqrt(this.transform.localPosition.x*this.transform.localPosition.x)<=4.5f && Mathf.Sqrt(this.transform.localPosition.z* this.transform.localPosition.z) <=4.5f))
         {
             if (this.transform.localRotation.y == 0.5f)

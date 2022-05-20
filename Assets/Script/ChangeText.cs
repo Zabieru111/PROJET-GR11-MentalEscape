@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChangeText : MonoBehaviour
 {
     public Slider sensitivity;
+    //change la valeur du texte pour la valeur de la sensibilité du manager
     public void ChangeValue()
     {
         int value = (int)sensitivity.value;

@@ -17,6 +17,7 @@ public class porte : MonoBehaviour
         }
      
     }
+    //ouvre la porte
     public void Ouvrir()
     {
         if (transform.localRotation.z < 0.5)

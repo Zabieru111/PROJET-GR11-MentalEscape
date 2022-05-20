@@ -34,7 +34,7 @@ if (this.transform.position.y <= plancher.transform.position.y+0.27f)
        {
            this.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
        }
-
+//l'objet pris suit la caméra du joueur
         if (picked == true)
         {
             this.transform.position = Camera.main.transform.position 
@@ -49,6 +49,7 @@ if (this.transform.position.y <= plancher.transform.position.y+0.27f)
         }
 
     }
+    //prend l'objet et le souleve
     public void prendre()
     {
         if (clear)

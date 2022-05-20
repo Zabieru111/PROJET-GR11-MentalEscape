@@ -26,6 +26,7 @@ public class Keypad : MonoBehaviour
             fermerCanvas();
         }
     }
+    //ouvre le canvas du keypad
     public void utiliser()
     {
         if (answered==false)
@@ -38,6 +39,7 @@ public class Keypad : MonoBehaviour
         }
 
     }
+    //change my answer en rajoutant la valeur du bouton pressé  
     public void clickButton(GameObject button)
     {
         if (nombreClick < 8)
@@ -48,6 +50,7 @@ public class Keypad : MonoBehaviour
             editMessage();
         }
     }
+    //enleve la valeur du dernier bouton pressé a myanswer
     public void undo()
     {
         if (nombreClick > 0)
@@ -57,6 +60,7 @@ public class Keypad : MonoBehaviour
             editMessage();
         }
     }
+    //effectue l'action souhaité si la réponse est la bonne
     public void checkAndswer()
     {
         
@@ -95,6 +99,7 @@ public class Keypad : MonoBehaviour
     {
         text.text = myAnswer;
     }
+
     public void fermerCanvas()
     {
         canvas.SetActive(false);

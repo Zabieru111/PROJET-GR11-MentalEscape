@@ -18,6 +18,7 @@ public class question : MonoBehaviour
             }
         }
     }
+    //ouvre le canvas de la question
     public void activate()
     {
         GameManager.instance.changeUsing();

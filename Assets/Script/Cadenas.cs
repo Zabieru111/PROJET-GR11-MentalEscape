@@ -33,6 +33,7 @@ public class Cadenas : MonoBehaviour
         }
         
     }
+    //permet l'utilisation de l'objet attaché au cadenas. Par exemple, pour une porte, ouvre la porte
     void deverouiller()
     {
         

@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public float afterUse;
 
 
-
+    
     public void addKey()
     {
         keyTakenNumber++;
@@ -129,6 +129,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = state.victory;
     }
+    //ouvre le canvas du menu
     public void OpenMenu()
     {
         if (GameMenuState == false)
@@ -139,6 +140,7 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
     }
+    //ferme le canvas du menu
     public void Resume()
     {
         gameState = state.inGame;

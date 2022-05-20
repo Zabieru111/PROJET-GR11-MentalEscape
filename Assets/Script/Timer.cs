@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
         TXTkeyNumber.text = "0";
     }
 
+ //prend le temps du manager et le copie pour modifier le texte
 
     void Update()
     {

@@ -18,6 +18,7 @@ public class tutoriel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //première étape du tutoriel
         if (Input.GetKeyDown(KeyCode.W))
         {
             w = true;
@@ -41,7 +42,7 @@ public class tutoriel : MonoBehaviour
             position = Camera.main.transform.rotation.x;
             
         }
-        
+        //deuxième étape du tutoriel
         if (etape2.enabled == true)
         {
             if (position != Camera.main.transform.rotation.x)
@@ -52,6 +53,7 @@ public class tutoriel : MonoBehaviour
             }
             
         }
+        //troisième étape du tutoriel
         if (Input.GetKeyDown(KeyCode.E))
         {
             etape3.enabled = false;

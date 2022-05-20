@@ -13,6 +13,7 @@ public class Defeat : MonoBehaviour
     }
 
     // Update is called once per frame
+    //fait apparaitre le canvas de la défaitre quand le temps du manager atteint 0
     void Update()
     {
 
